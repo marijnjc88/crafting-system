@@ -10,6 +10,11 @@ class PROCEDURALCRAFTING_API UProceduralCraftingSettings : public UDeveloperSett
 	GENERATED_BODY()
 	
 public:
+	virtual FName GetCategoryName() const override
+	{
+		return TEXT("Plugins");
+	}
+	
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Weapon Generation", meta = (ClampMin = "0.001", UIMin = "1.0"))
 	float NeutralScore = 50.0f;
 	
