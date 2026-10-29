@@ -15,4 +15,10 @@ public:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Resource")
 	FResourceStats Stats;
+	
+	UFUNCTION(BlueprintPure, Category = "Resource")
+	float GetStat(const EResourceStat Stat) const
+	{
+		return Stats.GetStat(Stat);
+	}
 };
