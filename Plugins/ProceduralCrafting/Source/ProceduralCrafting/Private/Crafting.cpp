@@ -104,7 +104,7 @@ float FCrafting::CalculateWeaponStat(const FResourceAggregation& Aggregation, co
 		
 		const FResourceStatAggregation* AggregatedStat = Aggregation.Stats.Find(Stat);
 		
-		if (!AggregatedStat || !FMath::IsFinite(AggregatedStat->Average))
+		if (!AggregatedStat)
 			continue;
 		
 		const float Value = AggregatedStat->Average;
